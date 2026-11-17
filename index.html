@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#f6f5ee">
   <meta name="description" content="梨の香りと緑に出会う、千葉県鎌ケ谷市のおすすめスポットをご紹介。歴史ある大仏から公園、野球場まで、まち歩きのヒントをお届けします。">
-  <title>かまがや日和｜鎌ケ谷のおすすめスポット</title>
+  <title>明日でも行ける；鎌ケ谷のおすすめスポット</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Zen+Old+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
@@ -71,7 +71,7 @@
         );
       background-repeat: repeat-y, repeat-y;
       background-size: 100% 200vh, 100% 200vh;
-      animation: rainbow-glow 1s linear infinite;
+      animation: rainbow-glow 1.5s linear infinite;
       pointer-events: none;
     }
     body::after {
@@ -106,7 +106,7 @@
         );
       background-repeat: repeat-x, repeat-x;
       background-size: 200vw 100%, 200vw 100%;
-      animation: rainbow-glow-horizontal 1s linear infinite;
+      animation: rainbow-glow-horizontal 1.5s linear infinite;
       pointer-events: none;
     }
     @keyframes rainbow-glow {
@@ -184,10 +184,7 @@
     .route:last-child { border-bottom: 1px solid var(--line); }
     .route span:first-child { color: var(--muted); }
     .route strong { font-weight: 600; }
-    .map-card { min-height: 290px; display: grid; place-items: center; overflow: hidden; background-color: #e9e9dc; background-image: linear-gradient(30deg, transparent 48%, #d2d7c8 49%, #d2d7c8 50%, transparent 51%), linear-gradient(120deg, transparent 48%, #d2d7c8 49%, #d2d7c8 50%, transparent 51%), linear-gradient(75deg, transparent 48%, #d2d7c8 49%, #d2d7c8 50%, transparent 51%); background-size: 110px 110px, 150px 150px, 180px 180px; }
-    .map-pin { display: grid; width: 104px; height: 104px; place-items: center; border: 1px solid rgb(73 109 84 / 25%); border-radius: 50%; background: rgb(246 245 238 / 88%); text-align: center; }
-    .map-pin span { display: block; color: var(--green); font-family: var(--serif); font-size: 21px; }
-    .map-pin small { display: block; margin-top: 4px; color: var(--muted); font-size: 9px; letter-spacing: .08em; }
+    .map-card { width: 100%; height: 290px; display: block; border: 0; }
 
     .footer { padding: 29px 0; background: #263d32; color: rgb(255 255 255 / 75%); }
     .footer-inner { display: flex; align-items: center; justify-content: space-between; }
@@ -223,7 +220,7 @@
       .access { padding: 76px 0; }
       .access-layout { grid-template-columns: 1fr; gap: 28px; }
       .access-copy h2 { font-size: 30px; }
-      .map-card { min-height: 220px; }
+      .map-card { height: 220px; }
       .footer-inner { align-items: flex-start; flex-direction: column; gap: 13px; }
     }
 
@@ -267,7 +264,7 @@
     <section class="intro" id="about">
       <div class="wrap">
         <p class="section-label">A LITTLE GUIDE TO KAMAGAYA</p>
-        <h2>東京から少しだけ、足をのばして。</h2>
+        <h2>東京から足をのばして。</h2>
         <p>都心からのアクセスもよく、気取らない心地よさがある鎌ケ谷。<br>歴史を感じる大仏や、季節のくだもの、緑あふれる公園まで。<br>自分のペースで楽しめる、まちのおすすめをご案内します。</p>
       </div>
     </section>
@@ -350,9 +347,7 @@
           <div class="route"><span>市内の移動</span><strong>電車・バス・徒歩など</strong></div>
           <div class="route"><span>お出かけ前に</span><strong>各施設の最新情報を確認</strong></div>
         </div>
-        <div class="map-card" role="img" aria-label="鎌ケ谷市周辺をイメージした地図">
-          <div class="map-pin"><div><span>鎌ケ谷</span><small>CHIBA, JAPAN</small></div></div>
-        </div>
+        <iframe class="map-card" src="https://maps.google.com/maps?q=%E9%8E%8C%E3%82%B1%E8%B0%B7%E5%B8%82&z=13&output=embed" title="鎌ケ谷市のGoogleマップ" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
   </main>
