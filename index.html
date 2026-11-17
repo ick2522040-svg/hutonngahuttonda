@@ -61,9 +61,35 @@
       animation: rainbow-glow 0.5s linear infinite;
       pointer-events: none;
     }
+    body::after {
+      position: fixed;
+      z-index: 0;
+      inset: 0;
+      content: "";
+      background-image: repeating-linear-gradient(
+        90deg,
+        transparent 0vw,
+        rgb(255 0 153 / 12%) 12.5vw,
+        rgb(255 119 0 / 11%) 25vw,
+        rgb(255 245 0 / 10%) 37.5vw,
+        rgb(57 255 20 / 12%) 50vw,
+        rgb(0 255 255 / 12%) 62.5vw,
+        rgb(0 119 255 / 12%) 75vw,
+        rgb(190 0 255 / 12%) 87.5vw,
+        transparent 100vw
+      );
+      background-repeat: repeat-x;
+      background-size: 200vw 100%;
+      animation: rainbow-glow-horizontal 0.5s linear infinite;
+      pointer-events: none;
+    }
     @keyframes rainbow-glow {
       0% { background-position: 50% 100%; }
       100% { background-position: 50% 0%; }
+    }
+    @keyframes rainbow-glow-horizontal {
+      0% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
     }
     main, .footer { position: relative; z-index: 1; }
     a { color: inherit; text-decoration: none; }
