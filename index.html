@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f5ee">
+  <meta name="description" content="梨の香りと緑に出会う、千葉県鎌ケ谷市のおすすめスポットをご紹介。歴史ある大仏から公園、野球場まで、まち歩きのヒントをお届けします。">
+  <title>かまがや日和｜鎌ケ谷のおすすめスポット</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Noto+Sans+JP:wght@400;500;600;700&family=Zen+Old+Mincho:wght@500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f6f5ee;
+      --ink: #263d32;
+      --muted: #788078;
+      --green: #496d54;
+      --orange: #d78a56;
+      --line: #e4e3d8;
+      --serif: "Zen Old Mincho", serif;
+      --sans: "Noto Sans JP", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 84px; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: var(--sans); -webkit-font-smoothing: antialiased; }
+    a { color: inherit; text-decoration: none; }
+    button { font: inherit; }
+    .wrap { width: min(1160px, calc(100% - 64px)); margin-inline: auto; }
+
+    .header { position: absolute; z-index: 5; inset: 0 0 auto; color: #fff; }
+    .header-inner { height: 82px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgb(255 255 255 / 28%); }
+    .brand { display: inline-flex; align-items: center; gap: 11px; font-size: 15px; font-weight: 600; letter-spacing: .12em; }
+    .brand-mark { width: 31px; height: 31px; display: grid; place-items: center; border: 1px solid rgb(255 255 255 / 72%); border-radius: 50%; font-family: var(--serif); font-size: 17px; }
+    .nav { display: flex; align-items: center; gap: 33px; font-size: 12px; letter-spacing: .09em; }
+    .nav a { transition: opacity .2s; }
+    .nav a:hover { opacity: .7; }
+    .nav .nav-cta { padding: 11px 18px; border: 1px solid rgb(255 255 255 / 65%); border-radius: 2px; }
+    .menu-toggle { display: none; padding: 8px; border: 0; background: transparent; color: inherit; cursor: pointer; }
+
+    .hero { position: relative; min-height: 690px; height: min(790px, 100svh); display: flex; align-items: center; overflow: hidden; color: #fff; background: #385244; }
+    .hero::before { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgb(20 39 30 / 75%) 0%, rgb(20 39 30 / 46%) 48%, rgb(20 39 30 / 8%) 100%), linear-gradient(0deg, rgb(15 31 24 / 22%), transparent 40%), url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=85") center 48% / cover; transform: scale(1.015); }
+    .hero-content { position: relative; z-index: 1; padding-top: 52px; }
+    .eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 26px; font-size: 11px; letter-spacing: .2em; }
+    .eyebrow::before { width: 30px; height: 1px; content: ""; background: currentColor; }
+    .hero h1 { margin: 0; font-family: var(--serif); font-size: clamp(43px, 7vw, 82px); font-weight: 500; line-height: 1.48; letter-spacing: .1em; }
+    .hero h1 span { color: #f0c99e; }
+    .hero-copy { margin: 24px 0 0; color: rgb(255 255 255 / 84%); font-size: 14px; line-height: 2.2; letter-spacing: .07em; }
+    .hero-bottom { position: absolute; right: 0; bottom: 36px; left: 0; display: flex; align-items: end; justify-content: space-between; }
+    .hero-location { font-family: "DM Sans", sans-serif; font-size: 11px; letter-spacing: .18em; }
+    .scroll-link { display: flex; align-items: center; gap: 13px; font-size: 10px; letter-spacing: .17em; }
+    .scroll-link::after { width: 1px; height: 43px; content: ""; background: rgb(255 255 255 / 70%); }
+
+    .intro { padding: 112px 0 100px; text-align: center; }
+    .section-label { margin: 0 0 18px; color: var(--green); font-family: "DM Sans", sans-serif; font-size: 10px; font-weight: 600; letter-spacing: .23em; text-transform: uppercase; }
+    .intro h2, .section-heading h2 { margin: 0; font-family: var(--serif); font-size: clamp(27px, 4vw, 40px); font-weight: 500; letter-spacing: .09em; line-height: 1.7; }
+    .intro p:last-child { margin: 22px 0 0; color: var(--muted); font-size: 13px; line-height: 2.3; letter-spacing: .04em; }
+
+    .spots { padding: 0 0 118px; }
+    .section-heading { display: flex; align-items: end; justify-content: space-between; margin-bottom: 35px; }
+    .section-heading .section-label { margin-bottom: 10px; }
+    .section-note { margin: 0 0 5px; color: var(--muted); font-size: 11px; letter-spacing: .08em; }
+    .spot-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; }
+    .spot-card { grid-column: span 2; min-width: 0; }
+    .spot-card:nth-child(4), .spot-card:nth-child(5) { grid-column: span 3; }
+    .spot-photo { position: relative; aspect-ratio: 1.44; overflow: hidden; background: #e4e5da; }
+    .spot-photo img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
+    .spot-card:hover .spot-photo img { transform: scale(1.045); }
+    .spot-number { position: absolute; top: 13px; left: 14px; display: grid; width: 34px; height: 34px; place-items: center; border-radius: 50%; background: var(--paper); color: var(--ink); font-family: "DM Sans", sans-serif; font-size: 11px; }
+    .spot-meta { display: flex; align-items: center; gap: 9px; margin: 19px 0 9px; color: var(--green); font-size: 10px; letter-spacing: .1em; }
+    .spot-meta span { padding: 4px 8px; border: 1px solid #d5dccf; border-radius: 20px; }
+    .spot-card h3 { margin: 0; font-family: var(--serif); font-size: 21px; font-weight: 600; letter-spacing: .04em; }
+    .spot-card p { margin: 10px 0 0; color: var(--muted); font-size: 12px; line-height: 1.95; }
+
+    .feature { position: relative; min-height: 390px; display: flex; align-items: center; overflow: hidden; color: #fff; background: #3a5544; }
+    .feature::before { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgb(25 46 35 / 83%), rgb(25 46 35 / 50%) 55%, rgb(25 46 35 / 12%)), url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85") center 53% / cover; }
+    .feature-inner { position: relative; padding-block: 70px; }
+    .feature .section-label { color: #e5bd91; }
+    .feature h2 { margin: 0; font-family: var(--serif); font-size: clamp(28px, 4vw, 42px); font-weight: 500; letter-spacing: .08em; line-height: 1.65; }
+    .feature p { margin: 17px 0 0; color: rgb(255 255 255 / 80%); font-size: 12px; line-height: 2; }
+    .feature-link { display: inline-flex; align-items: center; gap: 15px; margin-top: 25px; padding-bottom: 7px; border-bottom: 1px solid rgb(255 255 255 / 65%); font-size: 11px; letter-spacing: .08em; }
+    .feature-link span { font-size: 17px; transition: transform .2s; }
+    .feature-link:hover span { transform: translateX(4px); }
+
+    .access { padding: 104px 0 110px; }
+    .access-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: center; }
+    .access-copy h2 { margin: 0; font-family: var(--serif); font-size: 35px; font-weight: 500; letter-spacing: .08em; }
+    .access-copy > p { margin: 17px 0 27px; color: var(--muted); font-size: 12px; line-height: 2.1; }
+    .route { display: flex; align-items: center; justify-content: space-between; padding: 15px 0; border-top: 1px solid var(--line); font-size: 12px; }
+    .route:last-child { border-bottom: 1px solid var(--line); }
+    .route span:first-child { color: var(--muted); }
+    .route strong { font-weight: 600; }
+    .map-card { min-height: 290px; display: grid; place-items: center; overflow: hidden; background-color: #e9e9dc; background-image: linear-gradient(30deg, transparent 48%, #d2d7c8 49%, #d2d7c8 50%, transparent 51%), linear-gradient(120deg, transparent 48%, #d2d7c8 49%, #d2d7c8 50%, transparent 51%), linear-gradient(75deg, transparent 48%, #d2d7c8 49%, #d2d7c8 50%, transparent 51%); background-size: 110px 110px, 150px 150px, 180px 180px; }
+    .map-pin { display: grid; width: 104px; height: 104px; place-items: center; border: 1px solid rgb(73 109 84 / 25%); border-radius: 50%; background: rgb(246 245 238 / 88%); text-align: center; }
+    .map-pin span { display: block; color: var(--green); font-family: var(--serif); font-size: 21px; }
+    .map-pin small { display: block; margin-top: 4px; color: var(--muted); font-size: 9px; letter-spacing: .08em; }
+
+    .footer { padding: 29px 0; background: #263d32; color: rgb(255 255 255 / 75%); }
+    .footer-inner { display: flex; align-items: center; justify-content: space-between; }
+    .footer .brand { font-size: 12px; }
+    .copyright { font-family: "DM Sans", sans-serif; font-size: 10px; letter-spacing: .06em; }
+
+    @media (max-width: 700px) {
+      .wrap { width: min(100% - 40px, 520px); }
+      .header-inner { height: 70px; }
+      .menu-toggle { display: block; }
+      .menu-toggle svg { display: block; }
+      .nav { position: absolute; top: 70px; right: 0; left: 0; display: none; align-items: stretch; gap: 0; padding: 10px 20px 20px; background: #263d32; }
+      .nav.is-open { display: flex; flex-direction: column; }
+      .nav a { padding: 14px 0; border-bottom: 1px solid rgb(255 255 255 / 15%); }
+      .nav .nav-cta { margin-top: 10px; padding: 13px; border: 1px solid rgb(255 255 255 / 45%); text-align: center; }
+      .hero { min-height: 650px; height: 88svh; max-height: 780px; }
+      .hero::before { background-position: 58% center; }
+      .hero h1 { font-size: clamp(43px, 12vw, 64px); }
+      .hero-copy { font-size: 12px; }
+      .intro { padding: 78px 0 70px; }
+      .intro p:last-child { font-size: 12px; }
+      .section-heading { align-items: start; flex-direction: column; gap: 10px; margin-bottom: 25px; }
+      .spot-grid { grid-template-columns: 1fr 1fr; gap: 28px 14px; }
+      .spot-card, .spot-card:nth-child(4), .spot-card:nth-child(5) { grid-column: span 1; }
+      .spot-photo { aspect-ratio: 1.18; }
+      .spot-card h3 { font-size: 17px; }
+      .spot-card p { font-size: 11px; }
+      .spot-meta { flex-wrap: wrap; gap: 6px; font-size: 9px; }
+      .spots { padding-bottom: 76px; }
+      .feature { min-height: 360px; }
+      .feature::before { background-position: 58% center; }
+      .feature-inner { padding-block: 58px; }
+      .access { padding: 76px 0; }
+      .access-layout { grid-template-columns: 1fr; gap: 28px; }
+      .access-copy h2 { font-size: 30px; }
+      .map-card { min-height: 220px; }
+      .footer-inner { align-items: flex-start; flex-direction: column; gap: 13px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="wrap header-inner">
+      <a class="brand" href="#top" aria-label="かまがや日和 トップ">
+        <span class="brand-mark" aria-hidden="true">鎌</span>
+        <span>かまがや日和</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="メニューを開く" aria-expanded="false" aria-controls="site-nav">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.5"/></svg>
+      </button>
+      <nav class="nav" id="site-nav" aria-label="メインナビゲーション">
+        <a href="#about">鎌ケ谷のこと</a>
+        <a href="#spots">おすすめスポット</a>
+        <a href="#access">アクセス</a>
+        <a class="nav-cta" href="#spots">まち歩きをはじめる ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="wrap hero-content">
+        <p class="eyebrow">CHIBA · KAMAGAYA</p>
+        <h1 id="hero-title">いつもの先に、<br><span>いい日</span>がある。</h1>
+        <p class="hero-copy">梨の香りと、緑のよりみち。<br>まだ知らない鎌ケ谷に、会いにいこう。</p>
+      </div>
+      <div class="wrap hero-bottom">
+        <span class="hero-location">KAMAGAYA, CHIBA — JAPAN</span>
+        <a class="scroll-link" href="#about">SCROLL</a>
+      </div>
+    </section>
+
+    <section class="intro" id="about">
+      <div class="wrap">
+        <p class="section-label">A LITTLE GUIDE TO KAMAGAYA</p>
+        <h2>東京から少しだけ、足をのばして。</h2>
+        <p>都心からのアクセスもよく、気取らない心地よさがある鎌ケ谷。<br>歴史を感じる大仏や、季節のくだもの、緑あふれる公園まで。<br>自分のペースで楽しめる、まちのおすすめをご案内します。</p>
+      </div>
+    </section>
+
+    <section class="spots" id="spots">
+      <div class="wrap">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">LOCAL FAVORITES</p>
+            <h2>鎌ケ谷で、よりみち。</h2>
+          </div>
+          <p class="section-note">気になる場所から、今日の行き先を見つけよう。</p>
+        </div>
+        <div class="spot-grid">
+          <article class="spot-card">
+            <div class="spot-photo">
+              <img src="https://images.unsplash.com/photo-1528360983277-13d401cdc186?auto=format&fit=crop&w=900&q=80" alt="木々の間から見える日本の寺社" loading="lazy">
+              <span class="spot-number">01</span>
+            </div>
+            <div class="spot-meta"><span>歴史</span><span>まち歩き</span></div>
+            <h3>鎌ケ谷大仏</h3>
+            <p>新京成線の駅名にもなっている、鎌ケ谷のシンボル。住宅街に佇む小さな大仏さまに、まちの歴史を感じて。</p>
+          </article>
+          <article class="spot-card">
+            <div class="spot-photo">
+              <img src="https://images.unsplash.com/photo-1508184964240-ee96bb9677a7?auto=format&fit=crop&w=900&q=80" alt="緑に囲まれた野球場の風景" loading="lazy">
+              <span class="spot-number">02</span>
+            </div>
+            <div class="spot-meta"><span>スポーツ</span><span>ファミリー</span></div>
+            <h3>ファイターズ鎌ケ谷スタジアム</h3>
+            <p>北海道日本ハムファイターズのファーム本拠地。選手を身近に感じられる、野球好きにはたまらない場所。</p>
+          </article>
+          <article class="spot-card">
+            <div class="spot-photo">
+              <img src="https://images.unsplash.com/photo-1568702846914-96b305d2aaeb?auto=format&fit=crop&w=900&q=80" alt="みずみずしい梨や果物" loading="lazy">
+              <span class="spot-number">03</span>
+            </div>
+            <div class="spot-meta"><span>グルメ</span><span>季節を楽しむ</span></div>
+            <h3>鎌ケ谷の梨園</h3>
+            <p>梨の産地として知られる鎌ケ谷。夏から秋には、直売所や観光農園でみずみずしい旬の味に出会えます。</p>
+          </article>
+          <article class="spot-card">
+            <div class="spot-photo">
+              <img src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1100&q=80" alt="木漏れ日が差し込む緑豊かな公園" loading="lazy">
+              <span class="spot-number">04</span>
+            </div>
+            <div class="spot-meta"><span>自然</span><span>おさんぽ</span></div>
+            <h3>貝柄山公園</h3>
+            <p>池のまわりをゆっくり歩ける、緑豊かな市民の憩いの場。季節の景色を眺めながら、ひと休みしませんか。</p>
+          </article>
+          <article class="spot-card">
+            <div class="spot-photo">
+              <img src="https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf?auto=format&fit=crop&w=1100&q=80" alt="広々とした芝生と木々のある公園" loading="lazy">
+              <span class="spot-number">05</span>
+            </div>
+            <div class="spot-meta"><span>公園</span><span>ファミリー</span></div>
+            <h3>市制記念公園</h3>
+            <p>広場や遊具があり、家族でのんびり過ごせる公園。春には桜も楽しめる、地元で親しまれているスポットです。</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature" aria-labelledby="feature-title">
+      <div class="wrap feature-inner">
+        <p class="section-label">TASTE OF THE SEASON</p>
+        <h2 id="feature-title">旬のおいしさも、<br>旅のたのしみ。</h2>
+        <p>鎌ケ谷といえば、やっぱり梨。<br>旬の時期や販売状況は、農園・直売所にご確認ください。</p>
+        <a class="feature-link" href="#spots">梨園の情報を見る <span aria-hidden="true">→</span></a>
+      </div>
+    </section>
+
+    <section class="access" id="access">
+      <div class="wrap access-layout">
+        <div class="access-copy">
+          <p class="section-label">GETTING HERE</p>
+          <h2>鎌ケ谷へのアクセス</h2>
+          <p>鉄道の路線が複数通る鎌ケ谷。行き先に合わせて駅や交通手段をチェックして、ゆったりお出かけを。</p>
+          <div class="route"><span>東京方面から</span><strong>電車で約40〜60分</strong></div>
+          <div class="route"><span>市内の移動</span><strong>電車・バス・徒歩など</strong></div>
+          <div class="route"><span>お出かけ前に</span><strong>各施設の最新情報を確認</strong></div>
+        </div>
+        <div class="map-card" role="img" aria-label="鎌ケ谷市周辺をイメージした地図">
+          <div class="map-pin"><div><span>鎌ケ谷</span><small>CHIBA, JAPAN</small></div></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">鎌</span><span>かまがや日和</span></a>
+      <span class="copyright">© 2026 KAMAGAYA BIYORI</span>
+    </div>
+  </footer>
+  <script>
+    const menuButton = document.querySelector(".menu-toggle");
+    const navigation = document.querySelector("#site-nav");
+
+    menuButton.addEventListener("click", () => {
+      const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+      menuButton.setAttribute("aria-expanded", String(!isExpanded));
+      menuButton.setAttribute("aria-label", isExpanded ? "メニューを開く" : "メニューを閉じる");
+      navigation.classList.toggle("is-open", !isExpanded);
+    });
+
+    navigation.addEventListener("click", (event) => {
+      if (event.target.closest("a")) {
+        menuButton.setAttribute("aria-expanded", "false");
+        menuButton.setAttribute("aria-label", "メニューを開く");
+        navigation.classList.remove("is-open");
+      }
+    });
+  </script>
+</body>
+</html>
