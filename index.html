@@ -71,7 +71,7 @@
         );
       background-repeat: repeat-y, repeat-y;
       background-size: 100% 200vh, 100% 200vh;
-      animation: rainbow-glow 1.5s linear infinite;
+      animation: rainbow-glow 10s linear infinite;
       pointer-events: none;
     }
     body::after {
@@ -106,7 +106,7 @@
         );
       background-repeat: repeat-x, repeat-x;
       background-size: 200vw 100%, 200vw 100%;
-      animation: rainbow-glow-horizontal 1.5s linear infinite;
+      animation: rainbow-glow-horizontal 10s linear infinite;
       pointer-events: none;
     }
     @keyframes rainbow-glow {
@@ -133,7 +133,7 @@
     .menu-toggle { display: none; padding: 8px; border: 0; background: transparent; color: inherit; cursor: pointer; }
 
     .hero { position: relative; min-height: 690px; height: min(790px, 100svh); display: flex; align-items: center; overflow: hidden; color: #fff; background: #385244; }
-    .hero::before { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgb(20 39 30 / 75%) 0%, rgb(20 39 30 / 46%) 48%, rgb(20 39 30 / 8%) 100%), linear-gradient(0deg, rgb(15 31 24 / 22%), transparent 40%), url("https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=2200&q=85") center 48% / cover; transform: scale(1.015); }
+    .hero::before { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgb(20 39 30 / 75%) 0%, rgb(20 39 30 / 46%) 48%, rgb(20 39 30 / 8%) 100%), linear-gradient(0deg, rgb(15 31 24 / 22%), transparent 40%), url("https://image.walkerplus.com/wpimg/walkertouch/wtd/event/96/n/330996_4.jpg?x=635&notupsize=1") center 48% / cover; transform: scale(1.015); }
     .hero-content { position: relative; z-index: 1; padding-top: 52px; }
     .eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 26px; font-size: 11px; letter-spacing: .2em; }
     .eyebrow::before { width: 30px; height: 1px; content: ""; background: currentColor; }
@@ -157,7 +157,8 @@
     .spot-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 24px; }
     .spot-card { grid-column: span 2; min-width: 0; }
     .spot-card:nth-child(4), .spot-card:nth-child(5) { grid-column: span 3; }
-    .spot-photo { position: relative; aspect-ratio: 1.44; overflow: hidden; background: #e4e5da; }
+    .spot-photo { position: relative; display: block; aspect-ratio: 1.44; overflow: hidden; background: #e4e5da; }
+    .spot-photo:focus-visible { outline: 3px solid var(--orange); outline-offset: 3px; }
     .spot-photo img { width: 100%; height: 100%; display: block; object-fit: cover; transition: transform .6s cubic-bezier(.2,.7,.2,1); }
     .spot-card:hover .spot-photo img { transform: scale(1.045); }
     .spot-number { position: absolute; top: 13px; left: 14px; display: grid; width: 34px; height: 34px; place-items: center; border-radius: 50%; background: var(--paper); color: var(--ink); font-family: "DM Sans", sans-serif; font-size: 11px; }
@@ -167,7 +168,7 @@
     .spot-card p { margin: 10px 0 0; color: var(--muted); font-size: 12px; line-height: 1.95; }
 
     .feature { position: relative; min-height: 390px; display: flex; align-items: center; overflow: hidden; color: #fff; background: #3a5544; }
-    .feature::before { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgb(25 46 35 / 83%), rgb(25 46 35 / 50%) 55%, rgb(25 46 35 / 12%)), url("https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&w=2000&q=85") center 53% / cover; }
+    .feature::before { position: absolute; inset: 0; content: ""; background: linear-gradient(90deg, rgb(25 46 35 / 83%), rgb(25 46 35 / 50%) 55%, rgb(25 46 35 / 12%)), url("https://www.city.kamagaya.chiba.jp/kanko-bunka-sports/kanko/skyview.images/skyviewn.jpg") center 53% / cover; }
     .feature-inner { position: relative; padding-block: 70px; }
     .feature .section-label { color: #e5bd91; }
     .feature h2 { margin: 0; font-family: var(--serif); font-size: clamp(28px, 4vw, 42px); font-weight: 500; letter-spacing: .08em; line-height: 1.65; }
@@ -280,46 +281,46 @@
         </div>
         <div class="spot-grid">
           <article class="spot-card">
-            <div class="spot-photo">
+            <a class="spot-photo" href="#access" data-map-location="鎌ケ谷大仏" aria-label="鎌ケ谷大仏の場所をマップで見る">
               <img src="https://maruchiba.jp/lsc/upfile/spot/0001/0063/10063_1_l.jpg" alt="木々の間から見える日本の寺社" loading="lazy">
               <span class="spot-number">01</span>
-            </div>
+            </a>
             <div class="spot-meta"><span>歴史</span><span>まち歩き</span></div>
             <h3>鎌ケ谷大仏</h3>
             <p>新京成線の駅名にもなっている、鎌ケ谷のシンボル。住宅街に佇む小さな大仏さまに、まちの歴史を感じて。</p>
           </article>
           <article class="spot-card">
-            <div class="spot-photo">
+            <a class="spot-photo" href="#access" data-map-location="ファイターズ鎌ケ谷スタジアム" aria-label="ファイターズ鎌ケ谷スタジアムの場所をマップで見る">
               <img src="https://upload.wikimedia.org/wikipedia/commons/2/22/Kamagaya-stadium%282025exterior%29.png?utm_source=ja.wikipedia.org&utm_campaign=index&utm_content=original" alt="緑に囲まれた野球場の風景" loading="lazy">
               <span class="spot-number">02</span>
-            </div>
+            </a>
             <div class="spot-meta"><span>スポーツ</span><span>ファミリー</span></div>
             <h3>ファイターズ鎌ケ谷スタジアム</h3>
             <p>北海道日本ハムファイターズのファーム本拠地。選手を身近に感じられる、野球好きにはたまらない場所。</p>
           </article>
           <article class="spot-card">
-            <div class="spot-photo">
+            <a class="spot-photo" href="#access" data-map-location="梨園 鎌ケ谷市" data-map-zoom="13" aria-label="鎌ケ谷市内の梨園をマップで見る">
               <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkszkhTDWvKfZhD1JyM2LEdtM4-B_1n43IJTN3HxixaA&s=10" alt="みずみずしい梨や果物" loading="lazy">
               <span class="spot-number">03</span>
-            </div>
+            </a>
             <div class="spot-meta"><span>グルメ</span><span>季節を楽しむ</span></div>
             <h3>鎌ケ谷の梨園</h3>
             <p>梨の産地として知られる鎌ケ谷。夏から秋には、直売所や観光農園でみずみずしい旬の味に出会えます。</p>
           </article>
           <article class="spot-card">
-            <div class="spot-photo">
+            <a class="spot-photo" href="#access" data-map-location="貝柄山公園" aria-label="貝柄山公園の場所をマップで見る">
               <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9SL1gotjpF-64L7X-sEGGuH-oLg1R2BlV2kVyju6mPIJ47wu0yHgv70afIoLS882b3M6LyggkNOk8sXwDs2ozjvKgct9QIX0Fbi0NEYtjbd_uEcpIP7-dwRwBgjNRnPV9vWdVpI=s680-w680-h510-rw" alt="木漏れ日が差し込む緑豊かな公園" loading="lazy">
               <span class="spot-number">04</span>
-            </div>
+            </a>
             <div class="spot-meta"><span>自然</span><span>おさんぽ</span></div>
             <h3>貝柄山公園</h3>
             <p>池のまわりをゆっくり歩ける、緑豊かな市民の憩いの場。季節の景色を眺めながら、ひと休みしませんか。</p>
           </article>
           <article class="spot-card">
-            <div class="spot-photo">
+            <a class="spot-photo" href="#access" data-map-location="市制記念公園" aria-label="市制記念公園の場所をマップで見る">
               <img src="https://lh3.googleusercontent.com/gps-cs-s/ANWiy9QIgPrsaPVsKWvNBZaxPmU41d7WHX76WKed6BHt0cnmshFPNMI6gQhnXJtub4ARoFFbCggcUUTcUSTWHPOynUVdGJnezXQ2kdIdO83zB5OB1II3KGgYQ5J65DQQhptgo5iNs1Ya=s680-w680-h510-rw" alt="広々とした芝生と木々のある公園" loading="lazy">
               <span class="spot-number">05</span>
-            </div>
+            </a>
             <div class="spot-meta"><span>公園</span><span>ファミリー</span></div>
             <h3>市制記念公園</h3>
             <p>広場や遊具があり、家族でのんびり過ごせる公園。春には桜も楽しめる、地元で親しまれているスポットです。</p>
@@ -347,7 +348,7 @@
           <div class="route"><span>市内の移動</span><strong>電車・バス・徒歩など</strong></div>
           <div class="route"><span>お出かけ前に</span><strong>各施設の最新情報を確認</strong></div>
         </div>
-        <iframe class="map-card" src="https://maps.google.com/maps?q=%E9%8E%8C%E3%82%B1%E8%B0%B7%E5%B8%82&z=13&output=embed" title="鎌ケ谷市のGoogleマップ" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe class="map-card" id="spot-map" src="https://maps.google.com/maps?q=%E9%8E%8C%E3%82%B1%E8%B0%B7%E5%B8%82&z=13&output=embed" title="鎌ケ谷市のGoogleマップ" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
     </section>
   </main>
@@ -375,6 +376,16 @@
         menuButton.setAttribute("aria-label", "メニューを開く");
         navigation.classList.remove("is-open");
       }
+    });
+
+    document.querySelectorAll("[data-map-location]").forEach((spotLink) => {
+      spotLink.addEventListener("click", () => {
+        const location = spotLink.dataset.mapLocation;
+        const zoom = spotLink.dataset.mapZoom || "17";
+        const map = document.querySelector("#spot-map");
+        map.src = `https://maps.google.com/maps?q=${encodeURIComponent(location)}&z=${zoom}&output=embed`;
+        map.title = `${location}のGoogleマップ`;
+      });
     });
   </script>
 </body>
